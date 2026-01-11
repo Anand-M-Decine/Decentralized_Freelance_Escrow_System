@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Decentralized Freelance Escrow System</title>
+
+<style>
+body { background:#0d1117; color:white; font-family:Arial; padding:40px; }
+.card { background:#161b22; padding:20px; border-radius:10px; width:520px; }
+button,input { padding:10px; margin:5px; border-radius:5px; border:none; }
+button { background:#00ff9c; font-weight:bold; cursor:pointer; }
+pre { background:#0b1220; padding:10px; border-radius:5px; white-space:pre-line; }
+.hidden { display:none; }
+</style>
+</head>
+
+<body>
+
+<h2>Decentralized Freelance Escrow System</h2>
+
+<div class="card">
+  <button id="connect">Connect Wallet</button>
+  <p id="wallet"></p>
+  <p id="role"></p>
+
+  <div id="clientUI" class="hidden">
+    <h3>Client</h3>
+    <input id="eth" placeholder="ETH to fund">
+    <button id="fund">Fund Escrow</button>
+    <button id="approve">Approve & Pay</button>
+  </div>
+
+  <div id="freelancerUI" class="hidden">
+    <h3>Freelancer</h3>
+    <button id="submit">Submit Work</button>
+  </div>
+
+  <pre id="status"></pre>
+</div>
+
+<script src="./ethers.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
